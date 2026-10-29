@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0757a5">
+  <meta name="description" content="Pooja Optical - Optical, Eye Care & Blood Collection at Mohanpur Kundubari, Near Jagriti Sangha Club.">
+  <title>Pooja Optical | Eye Care & Optical Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0757a5; --deep:#063b73; --sky:#eaf5ff; --red:#e21d2a;
+      --teal:#007f78; --ink:#10243b; --muted:#63758a; --white:#fff;
+      --line:#e6edf4; --shadow:0 16px 45px rgba(10,48,85,.12); --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:var(--deep);color:#fff;font-size:13px}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;padding:8px 0}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-weight:800}
+    .brand img{width:52px;height:52px;object-fit:contain}
+    .brand span{font-size:20px;line-height:1.05;color:var(--blue)}
+    .brand small{display:block;color:var(--teal);font-size:9px;letter-spacing:.5px;margin-top:3px}
+    nav{display:flex;gap:24px;align-items:center;font-weight:600;font-size:14px}
+    nav a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer}
+    .nav-cta,.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(7,87,165,.22)}
+    .btn-secondary{background:#fff;color:var(--blue);border:1px solid #cfe0ef}
+    .menu{display:none;border:0;background:none;font-size:28px}
+    .hero{background:linear-gradient(135deg,#f2f9ff 0%,#fff 55%,#eefaf8 100%);padding:70px 0 58px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;background:#dff0ff;color:var(--blue);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:17px}
+    h1{font-family:Manrope,sans-serif;font-size:clamp(38px,5vw,65px);line-height:1.03;letter-spacing:-2px;margin-bottom:18px}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:17px;color:var(--muted);max-width:610px;margin-bottom:26px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;font-size:13px;font-weight:700;color:#41576e}
+    .hero-card{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+    .hero-card img{width:100%;height:520px;object-fit:cover}
+    .offer-badge{position:absolute;left:18px;bottom:18px;background:#fff;padding:13px 16px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.15);font-weight:800}
+    .offer-badge strong{color:var(--red)}
+    section{padding:78px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+    .section-head .eyebrow{margin-bottom:12px}
+    h2{font-family:Manrope,sans-serif;font-size:clamp(30px,4vw,44px);line-height:1.12;margin-bottom:12px}
+    .section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:#fff;box-shadow:0 8px 28px rgba(12,52,89,.06)}
+    .icon{width:50px;height:50px;border-radius:15px;background:var(--sky);display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+    .card h3{font-size:17px;margin-bottom:7px}
+    .card p{font-size:13px;color:var(--muted)}
+    .about{background:#f7fbff}
+    .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:45px;align-items:center}
+    .about-photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}
+    .about-photo img{height:540px;width:100%;object-fit:cover}
+    .checklist{list-style:none;margin:22px 0 28px;display:grid;gap:12px}
+    .checklist li{display:flex;gap:10px;align-items:flex-start}
+    .check{width:24px;height:24px;border-radius:50%;background:#dff6ef;color:var(--teal);display:grid;place-items:center;font-weight:900;flex:none}
+    .doctor-card{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:center;border-radius:28px;background:linear-gradient(135deg,#073c73,#0870ba);color:#fff;padding:28px;box-shadow:var(--shadow)}
+    .doctor-card img{width:100%;height:360px;object-fit:cover;border-radius:20px;background:#fff}
+    .doctor-card p{color:#dbeeff}
+    .doctor-meta{display:grid;gap:10px;margin:18px 0 25px}
+    .doctor-meta div{display:flex;gap:10px;align-items:flex-start}
+    .offer{background:linear-gradient(135deg,#fff4e7,#fff)}
+    .offer-box{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;border:1px solid #ffd6a8;border-radius:28px;padding:28px;background:#fff;box-shadow:var(--shadow)}
+    .offer-box img{width:100%;height:360px;object-fit:cover;border-radius:18px}
+    .offer-list{display:grid;gap:13px;margin:22px 0}
+    .offer-list div{font-weight:700}
+    .offer-percent{font-family:Manrope;font-size:54px;font-weight:800;color:var(--red);line-height:1}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .gallery button{border:0;padding:0;background:none;cursor:pointer;border-radius:18px;overflow:hidden;aspect-ratio:4/3}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:.25s}
+    .gallery button:hover img{transform:scale(1.04)}
+    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .info-card{border:1px solid var(--line);border-radius:20px;padding:24px}
+    .info-card h3{margin-bottom:8px}
+    .info-card p{color:var(--muted);font-size:14px}
+    .appointment{background:#f7fbff}
+    .form-wrap{max-width:760px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:var(--shadow)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    label{font-size:13px;font-weight:800;display:grid;gap:7px}
+    input,select,textarea{width:100%;border:1px solid #d6e2ec;border-radius:12px;padding:13px 14px;outline:none;background:#fff}
+    input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #e8f3ff}
+    textarea{min-height:100px;resize:vertical}
+    .full{grid-column:1/-1}
+    .form-note{font-size:12px;color:var(--muted);margin-top:10px}
+    footer{background:#062d55;color:#d9eaff;padding:50px 0 90px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:30px}
+    footer h3{color:#fff;margin-bottom:12px}
+    footer p,footer a{font-size:14px;color:#c3d7eb}
+    .footer-links{display:grid;gap:8px}
+    .bottom-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:60;padding:9px;display:none}
+    .bottom-bar .btn{flex:1;padding:11px 8px;font-size:13px}
+    .modal{position:fixed;inset:0;background:rgba(3,18,34,.82);display:none;place-items:center;padding:20px;z-index:100}
+    .modal.open{display:grid}
+    .modal img{max-width:min(1000px,95vw);max-height:88vh;object-fit:contain;border-radius:14px}
+    .close{position:absolute;top:18px;right:22px;background:#fff;border:0;width:42px;height:42px;border-radius:50%;font-size:24px;cursor:pointer}
+    @media(max-width:900px){
+      nav{display:none}.menu{display:block}.nav{height:68px}
+      .hero{padding:48px 0}.hero-grid,.about-grid,.doctor-card,.offer-box{grid-template-columns:1fr}
+      .hero-card img{height:430px}.about-photo img{height:400px}
+      .cards{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}
+      .doctor-card img{height:300px}.offer-box img{height:300px}.footer-grid{grid-template-columns:1fr 1fr}
+      .bottom-bar{display:flex;gap:8px}
+    }
+    @media(max-width:560px){
+      .topbar .container{justify-content:center;text-align:center}
+      .topbar .container span:last-child{display:none}
+      .brand img{width:45px;height:45px}.brand span{font-size:17px}
+      h1{font-size:40px;letter-spacing:-1.5px}
+      .hero p{font-size:15px}.actions .btn{width:100%}.trust{gap:10px;display:grid}
+      section{padding:58px 0}.cards{grid-template-columns:1fr 1fr;gap:12px}
+      .card{padding:18px}.card p{font-size:12px}.gallery{grid-template-columns:1fr 1fr;gap:10px}
+      .form-grid{grid-template-columns:1fr}.full{grid-column:auto}
+      .footer-grid{grid-template-columns:1fr}.offer-percent{font-size:44px}
+      .doctor-card{padding:18px}.offer-box{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Optical • Eye Care • Blood Collection</span><span>Call / WhatsApp: 9874346641</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="assets/pooja-logo.png" alt="Pooja Optical logo">
+        <span>POOJA OPTICAL<small>CLEAR VISION. BETTER LIFE.</small></span>
+      </a>
+      <nav>
+        <a href="#services">Services</a><a href="#doctor">Eye Doctor</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#appointment">Book Appointment</a>
+      </nav>
+      <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Your Local Eye Care Partner</div>
+          <h1>See Better.<br><span>Live Better.</span></h1>
+          <p>Pooja Optical brings together quality eyewear, eye testing, doctor consultation, contact lenses, sunglasses and blood collection — all at one convenient local destination.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/919874346641?text=Hello%20Pooja%20Optical%2C%20I%20want%20to%20book%20an%20appointment." target="_blank">Book on WhatsApp</a>
+            <a class="btn btn-secondary" href="tel:+919874346641">Call 9874346641</a>
+          </div>
+          <div class="trust"><span>✓ Eye Checkup</span><span>✓ Spectacles & Frames</span><span>✓ Eye Doctor</span><span>✓ Blood Collection</span></div>
+        </div>
+        <div class="hero-card">
+          <img src="assets/store-front.jpg" alt="Pooja Optical storefront">
+          <div class="offer-badge"><strong>20% OFF</strong> on Eyeglasses & Sunglasses</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">What We Offer</div><h2>Complete optical & eye-care services</h2><p>Everything you need for clearer vision and everyday eye care, under one roof.</p></div>
+        <div class="cards">
+          <div class="card"><div class="icon">👓</div><h3>Eyeglasses & Frames</h3><p>Choose from a wide range of everyday and stylish frames.</p></div>
+          <div class="card"><div class="icon">◉</div><h3>Contact Lenses</h3><p>Glass and contact-lens options for different vision needs.</p></div>
+          <div class="card"><div class="icon">🕶</div><h3>Sunglasses</h3><p>Comfortable and stylish sunglasses for everyday use.</p></div>
+          <div class="card"><div class="icon">👁</div><h3>Eye Consultation</h3><p>Consultation with an experienced eye consultant / optometrist.</p></div>
+          <div class="card"><div class="icon">✓</div><h3>Eye Testing</h3><p>Optical and vision-related testing at the store.</p></div>
+          <div class="card"><div class="icon">🩸</div><h3>Blood Collection</h3><p>Convenient blood collection service at the centre.</p></div>
+          <div class="card"><div class="icon">🔍</div><h3>Frame Selection</h3><p>Get help selecting frames that suit your comfort and style.</p></div>
+          <div class="card"><div class="icon">💙</div><h3>Local Care</h3><p>Friendly neighbourhood service close to Mohanpur Kundubari.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container about-grid">
+        <div class="about-photo"><img src="assets/store-interior.jpg" alt="Pooja Optical interior and eyewear collection"></div>
+        <div>
+          <div class="eyebrow">About Pooja Optical</div>
+          <h2>Your neighbourhood destination for better vision.</h2>
+          <p>Pooja Optical is an optical and eye-care centre in Mohanpur Kundubari, offering eyewear, eye-care services and blood collection in a modern, customer-friendly store.</p>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Wide selection of spectacles, frames and sunglasses</span></li>
+            <li><span class="check">✓</span><span>Eye doctor / optometrist consultation available</span></li>
+            <li><span class="check">✓</span><span>Contact lens and optical product options</span></li>
+            <li><span class="check">✓</span><span>Convenient location near Jagriti Sangha Club</span></li>
+          </ul>
+          <a class="btn btn-primary" href="#appointment">Book a Visit</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="doctor">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Eye Consultation</div><h2>Meet our eye consultant</h2><p>Doctor consultation is available on scheduled days. Please confirm the latest timing before visiting.</p></div>
+        <div class="doctor-card">
+          <img src="assets/doctor-card.png" alt="Dr. A. Kabali consultation information">
+          <div>
+            <h2>Dr. A. Kabali</h2>
+            <p>Eye Consultant / Optometrist • Contact Lens Specialist</p>
+            <div class="doctor-meta">
+              <div>✓ <span>B.OPT, M.OPT, D.OPT, BHMS, CCLP</span></div>
+              <div>✓ <span>Doctor consultation fee shown: ₹200</span></div>
+              <div>✓ <span>Availability shown: Tuesday & Saturday</span></div>
+              <div>✓ <span>Timings vary across promotional materials — confirm before visiting.</span></div>
+            </div>
+            <a class="btn" style="background:#fff;color:#0757a5" href="https://wa.me/919874346641?text=Hello%2C%20I%20want%20to%20confirm%20the%20eye%20doctor%20timing%20at%20Pooja%20Optical." target="_blank">Confirm Doctor Timing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer">
+      <div class="container">
+        <div class="offer-box">
+          <div>
+            <div class="eyebrow">Grand Opening Offer</div>
+            <div class="offer-percent">20% OFF</div>
+            <h2>Eyeglasses & Sunglasses</h2>
+            <div class="offer-list">
+              <div>✓ Free Eye Checkup</div>
+              <div>✓ Free Sugar Test</div>
+              <div>✓ Free Thyroid Test</div>
+              <div>✓ Offer associated with the September 2026 grand opening</div>
+            </div>
+            <a class="btn btn-primary" href="https://wa.me/919874346641?text=Hello%20Pooja%20Optical%2C%20I%20want%20to%20know%20about%20the%20current%20offers." target="_blank">Ask About Current Offer</a>
+          </div>
+          <img src="assets/offer.jpg" alt="Pooja Optical grand opening offer">
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Our Store</div><h2>Take a look inside</h2><p>Explore the store, eyewear displays and Pooja Optical branding.</p></div>
+        <div class="gallery">
+          <button onclick="openModal('assets/store-front.jpg')"><img src="assets/store-front.jpg" alt="Store front"></button>
+          <button onclick="openModal('assets/store-interior.jpg')"><img src="assets/store-interior.jpg" alt="Store interior"></button>
+          <button onclick="openModal('assets/offer.jpg')"><img src="assets/offer.jpg" alt="Offer"></button>
+          <button onclick="openModal('assets/doctor-card.png')"><img src="assets/doctor-card.png" alt="Doctor information"></button>
+          <button onclick="openModal('assets/pooja-logo.png')"><img src="assets/pooja-logo.png" alt="Pooja Optical logo"></button>
+          <button onclick="openModal('assets/business-whatsapp.png')"><img src="assets/business-whatsapp.png" alt="Business information"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Visit Us</div><h2>Everything is close to home.</h2><p>Call or WhatsApp before visiting to confirm current opening hours and doctor availability.</p></div>
+        <div class="info-grid">
+          <div class="info-card"><h3>📍 Address</h3><p>Mohanpur Kundubari, Near Jagriti Sangha Club, S.B. Road, West Bengal</p><br><a class="btn btn-secondary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pooja%20Optical%20Mohanpur%20Kundubari%20Near%20Jagriti%20Sangha%20Club">Get Directions</a></div>
+          <div class="info-card"><h3>📞 Call / WhatsApp</h3><p>9874346641</p><br><a class="btn btn-primary" href="https://wa.me/919874346641?text=Hello%20Pooja%20Optical" target="_blank">WhatsApp Now</a></div>
+          <div class="info-card"><h3>🕐 Opening Hours</h3><p>Hours shown on the supplied business information should be confirmed directly before visiting, especially on doctor-consultation days.</p><br><a class="btn btn-secondary" href="tel:+919874346641">Confirm Hours</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment" id="appointment">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Appointment</div><h2>Request an eye-care visit</h2><p>Submit the form and WhatsApp will open with your appointment details ready to send.</p></div>
+        <div class="form-wrap">
+          <form id="appointmentForm">
+            <div class="form-grid">
+              <label>Name<input id="name" required placeholder="Your name"></label>
+              <label>Phone<input id="phone" required inputmode="tel" placeholder="Your phone number"></label>
+              <label>Preferred Day<select id="day"><option>Tuesday</option><option>Saturday</option><option>Other day</option></select></label>
+              <label>Service<select id="service"><option>Eye Doctor Consultation</option><option>Eye Checkup</option><option>Eyeglasses / Frames</option><option>Contact Lenses</option><option>Sunglasses</option><option>Blood Collection</option></select></label>
+              <label class="full">Message<textarea id="message" placeholder="Tell us what you need"></textarea></label>
+              <div class="full"><button class="btn btn-primary" style="width:100%" type="submit">Send Appointment Request on WhatsApp</button><p class="form-note">This website does not take online payments. Your request is sent through WhatsApp for confirmation.</p></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><h3>POOJA OPTICAL</h3><p>Optical • Eye Care • Blood Collection</p><p style="margin-top:10px">Clear Vision. Better Life.</p></div>
+      <div><h3>Quick Links</h3><div class="footer-links"><a href="#services">Services</a><a href="#doctor">Eye Doctor</a><a href="#gallery">Gallery</a><a href="#appointment">Appointment</a></div></div>
+      <div><h3>Contact</h3><div class="footer-links"><a href="tel:+919874346641">9874346641</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pooja%20Optical%20Mohanpur%20Kundubari">Mohanpur Kundubari</a><a target="_blank" href="https://wa.me/919874346641">WhatsApp</a></div></div>
+    </div>
+  </footer>
+
+  <div class="bottom-bar">
+    <a class="btn btn-secondary" href="tel:+919874346641">Call</a>
+    <a class="btn btn-primary" target="_blank" href="https://wa.me/919874346641?text=Hello%20Pooja%20Optical%2C%20I%20want%20to%20book%20an%20appointment.">WhatsApp</a>
+    <a class="btn btn-secondary" href="#appointment">Book</a>
+  </div>
+
+  <div class="modal" id="modal" onclick="closeModal(event)">
+    <button class="close" onclick="closeModal(event)">×</button>
+    <img id="modalImg" src="" alt="Gallery preview">
+  </div>
+
+  <script>
+    function toggleMenu(){
+      const nav=document.querySelector('nav');
+      nav.style.display = nav.style.display==='flex' ? 'none' : 'flex';
+      if(nav.style.display==='flex'){
+        nav.style.position='absolute'; nav.style.top='68px'; nav.style.left='0'; nav.style.right='0';
+        nav.style.background='#fff'; nav.style.padding='18px 6%'; nav.style.flexDirection='column'; nav.style.alignItems='stretch';
+      }
+    }
+    function openModal(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('open')}
+    function closeModal(e){if(e.target.id==='modal'||e.target.classList.contains('close'))document.getElementById('modal').classList.remove('open')}
+    document.getElementById('appointmentForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const day=document.getElementById('day').value;
+      const service=document.getElementById('service').value;
+      const message=document.getElementById('message').value.trim();
+      const text=`Hello Pooja Optical,%0A%0AI want to request an appointment.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0APreferred day: ${encodeURIComponent(day)}%0AService: ${encodeURIComponent(service)}%0AMessage: ${encodeURIComponent(message || 'No additional message')}`;
+      window.open(`https://wa.me/919874346641?text=${text}`,'_blank');
+    });
+  </script>
+</body>
+</html>
